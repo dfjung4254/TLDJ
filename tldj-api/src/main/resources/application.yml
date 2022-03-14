@@ -1,0 +1,20 @@
+
+
+spring:
+
+  ## live reload
+  devtools:
+    livereload:
+      enabled: true
+
+  ## log color
+  output:
+    ansi:
+      enabled: always
+
+## logging
+logging:
+  level:
+    root: info
+
+
