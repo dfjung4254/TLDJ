@@ -24,6 +24,7 @@ public class TrackListController {
 
     Track track = trackListService.getTracks();
     TrackDto responseBody = TrackDto.of(track);
+    responseBody.setPlayTime(33L);
 
     return ResponseEntity.status(HttpStatus.OK)
         .body(responseBody);

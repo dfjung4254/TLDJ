@@ -3,8 +3,13 @@
 spring:
 
 ## live reload
+#  devtools:
+#    livereload:
+#      enabled: true
+
+## auto restart
   devtools:
-    livereload:
+    restart:
       enabled: true
 
 ## log color
@@ -15,7 +20,8 @@ spring:
 ## jpa
   jpa:
     hibernate:
-      ddl-auto: validate  # only for local
+      ddl-auto: create-drop # only for local
+  #      ddl-auto: validate
 
 
   ## data source
@@ -24,6 +30,7 @@ spring:
       driver-class-name: com.mysql.cj.jdbc.Driver
       url: jdbc:mysql://notionlog-1.cb8rglrqwuro.ap-northeast-2.rds.amazonaws.com:3306/tldj
       username: admin
+      password: ${TLDJ_PASSWORD}
 
 ## logging
 logging:
