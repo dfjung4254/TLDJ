@@ -6,6 +6,9 @@ Accept: application/json
 GET https://httpbin.org/get?show_env=1
 #Accept: application/json
 
+### POST request with
+POST localhost:8080/v1/album
+
 ### GET request with environment variables
 #GET {{host}}/get?show_env={{show_env}}
 #Accept: application/json
