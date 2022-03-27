@@ -1,7 +1,8 @@
 package com.tldj.tldjapi.trackList.service;
 
 import com.tldj.tldjapi.trackList.entity.Track;
-import com.tldj.tldjapi.trackList.repository.TrackListRepository;
+import com.tldj.tldjapi.trackList.repository.TrackRepository;
+import javax.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -9,18 +10,18 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 @RequiredArgsConstructor
-public class TrackListService {
+public class TrackService {
 
-  private final TrackListRepository trackListRepository;
+  private final TrackRepository trackRepository;
 
   public Track getTracks() {
-    return trackListRepository.findById(1L)
+    return trackRepository.findById(1L)
         .orElseGet(Track::new);
   }
 
-  public Track create(Track track) {
+  public Track create(@Valid Track track) {
 
-    Track newTrack = trackListRepository.save(track);
+    Track newTrack = trackRepository.save(track);
 
     return newTrack;
   }

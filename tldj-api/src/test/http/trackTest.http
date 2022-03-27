@@ -1,0 +1,12 @@
+### GET /v1/trackList 트랙리스트 목록 조회
+GET localhost:8080/v1/trackList
+Accept: application/json
+
+### POST /v1/trackList 트랙리스트 생성
+POST localhost:8080/v1/trackList
+Content-Type: application/json
+
+{
+  "name": "Lime twice V1.x",
+  "playTime": 210
+}
