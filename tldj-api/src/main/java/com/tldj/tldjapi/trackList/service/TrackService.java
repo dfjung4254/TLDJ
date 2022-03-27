@@ -18,6 +18,11 @@ public class TrackListService {
         .orElseGet(Track::new);
   }
 
+  public Track create(Track track) {
 
+    Track newTrack = trackListRepository.save(track);
+
+    return newTrack;
+  }
 
 }
